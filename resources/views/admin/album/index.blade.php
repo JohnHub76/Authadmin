@@ -70,7 +70,7 @@ border-radius: 0.2rem;
                 </tr>
               </thead>
               <tbody>
-                <?php foreach ($album->albumimages as $alimages): ?>
+                <?php foreach ($album->albumimage as $alimages): ?>
                 <tr>
                   <td><img src="{{url('/')}}/storage/albumimages/{{ $alimages['images'] }}" height="38px" alt="image" width="100px" />
                     </td>

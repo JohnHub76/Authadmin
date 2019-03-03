@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Album;
-use App\Albumimages;
+use App\Albumimage;
 
 use Illuminate\Http\Request;
 use Image; //Intervention Image
@@ -45,7 +45,7 @@ class AlbumController extends Controller
 	 
 	        foreach($request->file('images') as $file){
 
-	        	$albumimages= new Albumimages;
+	        	$albumimages= new Albumimage;
 	 
 	            //get filename with extension
 	            $filenamewithextension = $file->getClientOriginalName();
@@ -107,7 +107,7 @@ class AlbumController extends Controller
 	 
 	        foreach($request->file('images') as $file){
 
-	        	$albumimages= new Albumimages;
+	        	$albumimages= new Albumimage;
 	 
 	            //get filename with extension
 	            $filenamewithextension = $file->getClientOriginalName();
