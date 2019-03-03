@@ -30,3 +30,14 @@ Route::GET('admin-password/reset','Admin\ForgotPasswordController@showLinkReques
 Route::POST('admin-password/reset','Admin\ResetPasswordController@reset')->name('admin.password.update');
 Route::GET('admin-password/reset/{token}','Admin\ResetPasswordController@showResetForm')->name('admin.password.reset');
 
+
+Route::GET('admin/album/index','Admin\AlbumController@index')->name('admin.album.index');
+Route::GET('admin/album/create','Admin\AlbumController@createform')->name('admin.album.create');
+Route::POST('admin/album/create','Admin\AlbumController@store');
+Route::GET('admin/album/{albumid}/edit','Admin\AlbumController@edit')->name('admin.album.edit');
+Route::POST('admin/album/{albumid}','Admin\AlbumController@update')->name('admin.album.update');
+Route::DELETE('admin/album/{albumid}','Admin\AlbumController@destroy')->name('admin.album.destroy');
+
+Route::resource('admin/slider', 'Admin\SliderController');
+Route::resource('admin/offer', 'Admin\OfferController');
+Route::resource('admin/albumimages', 'Admin\AlbumimageController');

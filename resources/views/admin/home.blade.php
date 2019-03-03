@@ -21,17 +21,17 @@
         <div class="card-deck">
   <div class="card bg-primary">
     <div class="card-body text-center">
-      <a href="#"><h2 class="card-text">Create New Slider</h2></a>
+      <a href="{{ route('slider.create') }}"><h2 class="card-text">Create New Slider</h2></a>
     </div>
   </div>
   <div class="card bg-warning">
     <div class="card-body text-center">
-      <a href="#"><h2 class="card-text">Create New Offer</h2></a>
+      <a href="{{ route('offer.create') }}"><h2 class="card-text">Create New Offer</h2></a>
     </div>
   </div>
   <div class="card bg-success">
     <div class="card-body text-center">
-      <a href="#"><h2 class="card-text">Create New Album</h2></a>
+      <a href="{{ route('admin.album.create') }}"><h2 class="card-text">Create New Album</h2></a>
     </div>
   </div>  
 </div>

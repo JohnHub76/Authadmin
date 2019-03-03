@@ -6,9 +6,9 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{ route('admin.home') }}" class="brand-link">
-      <img src="{{ asset('img/logo.png') }}" alt="WebZera" class="brand-image img-circle elevation-3"
+      <img src="{{ asset('img/logo.png') }}" alt="Al Rayan" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">WebZera</span>
+      <span class="brand-text font-weight-light">Al Rayan</span>
     </a>
 
     <!-- Sidebar -->
@@ -29,27 +29,27 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                <?php
-                // $routeArray = app('request')->route()->getAction();
-                // $controllerAction = class_basename($routeArray['controller']);
-                // list($controller, $action) = explode('@', $controllerAction);
+                $routeArray = app('request')->route()->getAction();
+                $controllerAction = class_basename($routeArray['controller']);
+                list($controller, $action) = explode('@', $controllerAction);
                ?>
           <li class="nav-item has-treeview menu-open">
 
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link>">
+                <a href="{{ route('slider.index') }}" class="nav-link <?php if($controller=='SliderController') echo 'active' ?>">
                   <i class="fa fa-laptop nav-icon"></i>
                   <p>Sliders</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('offer.index') }}" class="nav-link <?php if($controller=='OfferController') echo 'active' ?>">
                   <i class="fa fa-magic nav-icon"></i>
                   <p>Offers</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.album.index') }}" class="nav-link <?php if($controller=='AlbumController') echo 'active' ?>">
                   <i class="fa fa-id-badge nav-icon"></i>
                   <p>Albums</p>
                 </a>
